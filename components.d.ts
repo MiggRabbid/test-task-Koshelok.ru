@@ -12,5 +12,11 @@ export {}
 declare module 'vue' {
   export interface GlobalComponents {
     HelloWorld: typeof import('./src/components/HelloWorld.vue')['default']
+    TaskFilters: typeof import('./src/components/Task/TaskFilters.vue')['default']
+    TaskForm: typeof import('./src/components/Task/TaskForm.vue')['default']
+    TaskFotm: typeof import('./src/components/Task/TaskFotm.vue')['default']
+    TaskItem: typeof import('./src/components/Task/TaskItem.vue')['default']
+    TaskList: typeof import('./src/components/Task/TaskList.vue')['default']
+    TaskStats: typeof import('./src/components/Task/TaskStats.vue')['default']
   }
 }

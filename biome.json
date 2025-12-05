@@ -1,0 +1,22 @@
+{
+  "files": {
+    "includes": ["src/**/*", "**/*.vue"]
+  },
+  "linter": {
+    "enabled": true,
+    "rules": {
+      "recommended": true
+    }
+  },
+  "formatter": {
+    "enabled": true
+  },
+  "overrides": [
+    {
+      "includes": ["**/*.vue"],
+      "linter": {
+        "rules": {}
+      }
+    }
+  ]
+}
