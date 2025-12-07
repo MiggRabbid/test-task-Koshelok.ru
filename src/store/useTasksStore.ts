@@ -1,5 +1,5 @@
 import { defineStore } from "pinia";
-import { ref, computed, onMounted, watch } from "vue";
+import { ref, computed, onMounted, onUnmounted } from "vue";
 import {
 	type ITask,
 	type ITasksStats,
@@ -123,6 +123,12 @@ export const useTasksStore = defineStore("tasks", () => {
 	const setFilter = (filter: TypeFilter) => {
 		currentFilter.value = filter;
 	};
+
+	onUnmounted(() => {
+		Object.values(deletionTimers.value).forEach((timer) => {
+			clearInterval(timer.timerId);
+		});
+	});
 
 	return {
 		tasks,

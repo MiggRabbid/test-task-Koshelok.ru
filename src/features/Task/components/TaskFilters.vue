@@ -7,11 +7,19 @@ import { TypeFilter } from "@/types";
 const tasksStore = useTasksStore();
 
 const taskCounters = computed(() => {
-  return {
-    all: tasksStore.tasks.length,
-    active: tasksStore.tasks.filter(t => !t.completed).length,
-    completed: tasksStore.tasks.filter(t => t.completed).length,
-  };
+	const counter = {
+		all: tasksStore.tasks.length,
+		active: 0,
+		completed: 0,
+	};
+	tasksStore.tasks.forEach((task) => {
+		if (task.completed) {
+			counter.completed += 1;
+		} else {
+			counter.active += 1;
+		}
+	});
+	return counter;
 });
 </script>
 
