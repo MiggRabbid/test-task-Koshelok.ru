@@ -15,3 +15,7 @@
 
 ## ❗️Сдача задания
 Сделайте форк от этого репозитория, решите найденные проблемы и поставленные задачи. Опишите в файл RESULT.md что было найдено и решено. Выложите решение на какой либо хостинг (Yandex Storage, Firbase Hosting и т.д.)
+
+## Решение:
+[RESULT.md](./RESULT.md)
+[GH-Pages](https://miggrabbid.github.io/test-task-Koshelok.ru/)
