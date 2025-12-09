@@ -56,3 +56,40 @@
 - более четко разделить на слои UI и логики (инпуты, кнопки и т.д.);
 - убрать лишние шрифты при сборке проекта;
 - добавить обработку ошибок для api.
+
+#### Структура проекта
+
+```
+├── public
+│   ├── favicon.ico
+│   └── logo.svg
+├── src
+│   ├── App.vue
+│   ├── api                         // фейк-api для получения задач 
+│   ├── features
+│   │   ├── Task                    // компонент Задач
+│   │   │   ├── Tasks.vue
+│   │   │   ├── components
+│   │   │   │   ├── TaskFilters.vue
+│   │   │   │   ├── TaskForm.vue
+│   │   │   │   ├── TaskItem.vue
+│   │   │   │   ├── TaskList.vue
+│   │   │   │   └── TaskStats.vue
+│   │   └── TasksLog                // компонент Логирования
+│   │       ├── TasksLog.vue
+│   │       ├── components
+│   │       │   ├── TaskLogItem.vue
+│   │       │   └── TasksLogList.vue
+│   ├── hooks
+│   │   └── useLocalStorage.ts      // хук для работы с локальным хранилищем
+│   ├── main.ts
+│   ├── shared                       
+│   │   └── Layouts
+│   │       └── AppHeader.vue
+│   ├── store                       // pinia сторы 
+│   │   ├── useChangeLogStore.ts
+│   │   └── useTasksStore.ts
+│   ├── types                       // Типизация
+│   └── utils                       // Утилиты
+
+```
