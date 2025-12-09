@@ -3,7 +3,10 @@
 
 <template>
   <v-app-bar color="white" density="compact">
-    <img class="logo ml-12 mr-4" src="/logo.svg" />
+      <img
+        class="logo ml-12 mr-4"
+        src="/logo.svg" 
+      />
     <v-app-bar-title>Управление задачами</v-app-bar-title>
   </v-app-bar>
 </template>

@@ -9,6 +9,7 @@ import {
 import { useLocalStorage } from "@/hooks";
 import { loadTasks } from "@/api";
 import { useChangeLogStore } from ".";
+import { getTime } from '@/utils';
 
 // Стор для хранения задач
 export const useTasksStore = defineStore("tasks", () => {
@@ -59,7 +60,7 @@ export const useTasksStore = defineStore("tasks", () => {
 		if (!title.trim()) return;
 
 		const newTask: ITask = {
-			id: Date.now(),
+			id: getTime(),
 			title,
 			completed: false,
 			createdAt: new Date(),
